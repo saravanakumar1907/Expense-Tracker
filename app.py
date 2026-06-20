@@ -12,7 +12,7 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)s %(message)s'
 )
 dynamodb = boto3.resource('dynamodb', region_name='ap-south-1')
-table = dynamodb.Table('Expense')
+table = dynamodb.Table('Expenses')
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
